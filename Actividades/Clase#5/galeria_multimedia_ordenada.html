@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería Multimedia - ISW</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background:grey;
+}
+header{
+    text-align:center;
+    background:red;
+    color:grey;
+    padding:20px;
+    border-radius:10px;
+}
+section{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+h2{
+    color:#2c3e50;
+}
+.media{
+    text-align:center;
+}
+iframe, video, img{
+    max-width:100%;
+}
+footer{
+    text-align:center;
+    margin-top:20px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Galería Multimedia del Curso ISW</h1>
+    <p>Ejemplo de uso de Picture, Video, Audio e Iframe en HTML</p>
+</header>
+
+<section>
+    <h2>📷 Imagen Principal</h2>
+    <div class="media">
+        <picture>
+            <source srcset="imagen.webp" type="image/webp">
+            <source srcset="imagen.jpg" type="image/jpeg">
+            <img src="imagen.jpg"
+                 alt="Estudiantes participando en una clase"
+                 title="Imagen principal del curso"
+                 width="600">
+        </picture>
+    </div>
+</section>
+
+<section>
+    <h2>🎥 Video de la Clase</h2>
+    <div class="media">
+        <video controls poster="poster.jpg" width="600" title="Video introductorio">
+            <source src="clase.mp4" type="video/mp4">
+            <source src="clase.webm" type="video/webm">
+            Tu navegador no soporta video.
+        </video>
+    </div>
+</section>
+
+<section>
+    <h2>🎧 Podcast del Curso</h2>
+    <div class="media">
+        <audio controls autoplay title="Podcast introductorio">
+            <source src="podcast.mp3" type="audio/mpeg">
+            <source src="podcast.ogg" type="audio/ogg">
+            Tu navegador no soporta audio.
+        </audio>
+    </div>
+</section>
+
+<section>
+    <h2>📍 Ubicación del Curso</h2>
+    <div class="media">
+        <iframe
+            src="https://www.google.com/maps/embed?pb="
+            width="600"
+            height="400"
+            title="Mapa de ubicación"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<footer>
+    <p>Actividad Tema 6 - Multimedia en HTML</p>
+</footer>
+
+</body>
+</html>
