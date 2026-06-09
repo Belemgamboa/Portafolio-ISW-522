@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AcueductosIoT</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      Acueductos<span>IoT</span>
+    </div>
+
+    <ul class="menu" aria-label="Menú principal">
+      <li>Inicio</li>
+      <li>Sensores</li>
+      <li>Alertas</li>
+      <li>Reportes</li>
+    </ul>
+
+    <button class="btn-login" type="button">Iniciar Sesión</button>
+  </nav>
+
+  <div class="dashboard">
+
+    <!-- 🚪 Sidebar colapsable en móvil (sin JS) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+      ☰ Menú
+    </label>
+
+    <aside class="sidebar" aria-label="Menú lateral">
+      <div class="sidebar-inner">
+        <h3>MENÚ</h3>
+
+        <a class="active" href="#resumen">
+          <span class="icon">🏠</span> Resumen
+        </a>
+        <a href="#tanques">
+          <span class="icon">🛢️</span> Tanques
+        </a>
+        <a href="#presiones">
+          <span class="icon">📡</span> Presiones
+        </a>
+        <a href="#calidad">
+          <span class="icon">💧</span> Calidad
+        </a>
+        <a href="#configuracion">
+          <span class="icon">⚙️</span> Configuración
+        </a>
+
+        <div class="alerts">
+          <h3>ALERTAS ACTIVAS</h3>
+
+          <div class="alert alert--warning">
+            <span class="pill pill--warning">⚠️</span>
+            Presión baja - Sector B
+          </div>
+
+          <div class="alert alert--warning">
+            <span class="pill pill--warning">📉</span>
+            Tanque al 25%
+          </div>
+
+          <div class="alert alert--danger">
+            <span class="pill pill--danger">⛔</span>
+            Sensor fuera de línea
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+      <div class="hero">
+        <div>
+          <h1>Centro de Monitoreo IoT</h1>
+          <p>Supervisión en tiempo real del sistema de acueductos</p>
+
+          <div class="hero-chips" role="group" aria-label="Estado del sistema">
+            <span class="chip chip--online">🟢 En Línea</span>
+            <span class="chip">🔔 3 alertas</span>
+            <span class="chip">⏱️ Últ. actualización: 14:30</span>
+          </div>
+        </div>
+
+        <div class="watermark" aria-hidden="true">AcueductosIoT</div>
+      </div>
+
+      <!-- TARJETAS SUPERIORES -->
+      <section class="top-cards" aria-label="Indicadores principales">
+        <div class="status-card glow glow--green">
+          <h4>Estado General</h4>
+          <div class="status-row">
+            <span class="status-dot status-dot--green"></span>
+            <span class="status-value">En Línea</span>
+          </div>
+        </div>
+
+        <div class="status-card glow glow--blue">
+          <h4>Sensores Activos</h4>
+          <div class="big-number">24</div>
+        </div>
+
+        <div class="status-card glow glow--purple">
+          <h4>Última Actualización</h4>
+          <div class="big-number">14:30</div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="cards" aria-label="Métricas">
+        <div class="card glow glow--aqua">
+          <h4>Nivel de Tanque</h4>
+          <p class="metric">73%</p>
+          <div class="bar">
+            <span style="width:73%"></span>
+          </div>
+        </div>
+
+        <div class="card glow glow--blue">
+          <h4>Presión de Red</h4>
+          <p class="metric">45 PSI</p>
+          <div class="bar">
+            <span style="width:55%"></span>
+          </div>
+        </div>
+
+        <div class="card glow glow--teal">
+          <h4>Calidad del Agua</h4>
+          <p class="metric">0.8 mg/L</p>
+          <div class="bar">
+            <span style="width:62%"></span>
+          </div>
+        </div>
+
+        <div class="card glow glow--orange">
+          <h4>Caudal</h4>
+          <p class="metric">125 L/min</p>
+          <div class="bar">
+            <span style="width:68%"></span>
+          </div>
+        </div>
+
+        <div class="card glow glow--pink">
+          <h4>Temperatura</h4>
+          <p class="metric">22°C</p>
+          <div class="bar">
+            <span style="width:44%"></span>
+          </div>
+        </div>
+
+        <div class="card glow glow--green2">
+          <h4>Estado de Válvula</h4>
+          <div class="valve">
+            <span class="valve-icon">🔓</span>
+            <span class="valve-text">Abierta</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFERIOR -->
+      <section class="bottom-section">
+        <div class="activity glow glow--blue">
+          <h3>Actividad Reciente</h3>
+          <div class="item">14:32 - Sensor actualizado</div>
+          <div class="item">14:28 - Presión verificada</div>
+          <div class="item">14:20 - Sensor conectado</div>
+        </div>
+
+        <div class="chart glow glow--aqua">
+          <h3>Consumo Diario</h3>
+          <div class="chart-placeholder">
+            <div class="chart-grid" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="chart-text">📊 Gráfico (placeholder)</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
